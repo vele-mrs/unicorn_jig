@@ -1,13 +1,3 @@
-
-
-
-
-
-環境：Vivado 2021.2
-
-
-
-
 Tclコマンド
 
 pwd
@@ -24,7 +14,7 @@ tclファイルの読み込み
 
 gitコマンド
 git init
-git remote add origin https://github.com/vele-mrs/unicorn_jig.git
+git remote add origin xxx
 git status
 git add *
 git commit -m "init"
