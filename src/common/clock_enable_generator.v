@@ -1,9 +1,7 @@
 /* ----------------------------------------------------------------------------
     Module : clock_enable_generator
 
-    Author : vele-mrs
-        https://github.com/vele-mrs
-        https://www.youtube.com/@vele-mrs
+    Author : Shun AOKI
 
     Description : 
         I_DIV = 100,000

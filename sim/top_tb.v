@@ -1,9 +1,7 @@
 /* ----------------------------------------------------------------------------
     Module : top_tb
 
-    Author : vele-mrs
-        https://github.com/vele-mrs
-        https://www.youtube.com/@vele-mrs
+    Author : Shun AOKI
 ---------------------------------------------------------------------------- */
 
 `timescale 1ns / 100ps

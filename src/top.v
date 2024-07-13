@@ -1,9 +1,7 @@
 /* ----------------------------------------------------------------------------
     Module : top _
 
-    Author : vele-mrs
-        https://github.com/vele-mrs
-        https://www.youtube.com/@vele-mrs
+    Author : Shun AOKI
     
     Vivado : 2021.2
     Board : Arty A7

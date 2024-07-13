@@ -1,9 +1,7 @@
 /* ----------------------------------------------------------------------------
     Module : rainbow_controller
 
-    Author : vele-mrs
-        https://github.com/vele-mrs
-        https://www.youtube.com/@vele-mrs
+    Author : Shun AOKI
 
     Description : 
          _/\_/\_/\ O_DUTY_R

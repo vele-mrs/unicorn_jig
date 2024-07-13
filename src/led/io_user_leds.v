@@ -1,9 +1,7 @@
 /* ----------------------------------------------------------------------------
     Module : io_user_leds
 
-    Author : vele-mrs
-        https://github.com/vele-mrs
-        https://www.youtube.com/@vele-mrs
+    Author : Shun AOKI
     
     Description : 
         Input
@@ -54,6 +52,10 @@ module io_user_leds (
     wire [               9:0]   w_vio_timer         ; 
     wire [               6:0]   w_vio_brightness    ; 
     wire                        w_vio_inverted      ; 
+    wire                        w_vio_fixd_mode     ; 
+    wire [               6:0]   w_vio_duty_r        ;
+    wire [               6:0]   w_vio_duty_g        ;
+    wire [               6:0]   w_vio_duty_b        ;
 
     wire [P_MODULE_NUM    :0]   w_pulse             ;
     wire [P_MODULE_NUM*7-1:0]   w_duty              ;
@@ -92,7 +94,12 @@ module io_user_leds (
 /* ----------------------------------------------------------------------------
     pwm_controller
 ---------------------------------------------------------------------------- */
-    assign w_duty = {   w_duty_r,w_duty_g,w_duty_b,
+    assign w_duty = (w_vio_fixd_mode) ?
+                    {   w_vio_duty_r,w_vio_duty_g,w_vio_duty_b,
+                        w_vio_duty_r,w_vio_duty_g,w_vio_duty_b,
+                        w_vio_duty_r,w_vio_duty_g,w_vio_duty_b,
+                        w_vio_duty_r,w_vio_duty_g,w_vio_duty_b} :
+                    {   w_duty_r,w_duty_g,w_duty_b,
                         w_duty_g,w_duty_b,w_duty_r,
                         w_duty_b,w_duty_r,w_duty_g,
                         w_duty_r,w_duty_g,w_duty_b} ;
@@ -140,6 +147,10 @@ module io_user_leds (
         ,.probe_out0    (w_vio_timer[9:0]       ) // [9:0] init:0x0FF
         ,.probe_out1    (w_vio_brightness[6:0]  ) // [6:0] init:0x32
         ,.probe_out2    (w_vio_inverted         ) //       init:0x0 (Normal Mode)
+        ,.probe_out3    (w_vio_fixd_mode        ) //       init:0x0 (Normal Mode)
+        ,.probe_out4    (w_vio_duty_r           ) // [6:0] init:0x0 
+        ,.probe_out5    (w_vio_duty_g           ) // [6:0] init:0x0 
+        ,.probe_out6    (w_vio_duty_b           ) // [6:0] init:0x0 
     ) ;
 
 /* ----------------------------------------------------------------------------
