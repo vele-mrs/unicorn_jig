@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3,276.895000 us"></ZoomStartTime>
+      <ZoomEndTime time="4,080.895001 us"></ZoomEndTime>
+      <Cursor1Time time="3,640.895000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/top_tb/r_clk_100mhz" type="logic">
+      <obj_property name="ElementShortName">r_clk_100mhz</obj_property>
+      <obj_property name="ObjectShortName">r_clk_100mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/r_sw" type="array">
+      <obj_property name="ElementShortName">r_sw[3:0]</obj_property>
+      <obj_property name="ObjectShortName">r_sw[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/r_btn" type="array">
+      <obj_property name="ElementShortName">r_btn[3:0]</obj_property>
+      <obj_property name="ObjectShortName">r_btn[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led" type="array">
+      <obj_property name="ElementShortName">w_led[3:0]</obj_property>
+      <obj_property name="ObjectShortName">w_led[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led0_b" type="logic">
+      <obj_property name="ElementShortName">w_led0_b</obj_property>
+      <obj_property name="ObjectShortName">w_led0_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led0_g" type="logic">
+      <obj_property name="ElementShortName">w_led0_g</obj_property>
+      <obj_property name="ObjectShortName">w_led0_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led0_r" type="logic">
+      <obj_property name="ElementShortName">w_led0_r</obj_property>
+      <obj_property name="ObjectShortName">w_led0_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led1_b" type="logic">
+      <obj_property name="ElementShortName">w_led1_b</obj_property>
+      <obj_property name="ObjectShortName">w_led1_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led1_g" type="logic">
+      <obj_property name="ElementShortName">w_led1_g</obj_property>
+      <obj_property name="ObjectShortName">w_led1_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led1_r" type="logic">
+      <obj_property name="ElementShortName">w_led1_r</obj_property>
+      <obj_property name="ObjectShortName">w_led1_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led2_b" type="logic">
+      <obj_property name="ElementShortName">w_led2_b</obj_property>
+      <obj_property name="ObjectShortName">w_led2_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led2_g" type="logic">
+      <obj_property name="ElementShortName">w_led2_g</obj_property>
+      <obj_property name="ObjectShortName">w_led2_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led2_r" type="logic">
+      <obj_property name="ElementShortName">w_led2_r</obj_property>
+      <obj_property name="ObjectShortName">w_led2_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led3_b" type="logic">
+      <obj_property name="ElementShortName">w_led3_b</obj_property>
+      <obj_property name="ObjectShortName">w_led3_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led3_g" type="logic">
+      <obj_property name="ElementShortName">w_led3_g</obj_property>
+      <obj_property name="ObjectShortName">w_led3_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_tb/w_led3_r" type="logic">
+      <obj_property name="ElementShortName">w_led3_r</obj_property>
+      <obj_property name="ObjectShortName">w_led3_r</obj_property>
+   </wvobject>
+</wave_config>
