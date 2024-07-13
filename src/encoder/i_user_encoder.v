@@ -30,21 +30,36 @@ module i_user_encoder (
     parameter ROT_CCW   = 1'b1      ;
 
     // Declaration
-    reg [31:0]  r_cnt           ;
-    reg [ 2:0]  r_state         ;
-    reg         r_rot_dir       ;
-    reg         r_enc_A         ;
-    reg         r_enc_B         ;
-    reg         r_posedge_A     ;
-    reg         r_posedge_B     ;
-    reg         r_negedge_A     ;
-    reg         r_negedge_B     ;
+    reg [31:0]  r_cnt               ;
+    reg [ 2:0]  r_state             ;
+    reg         r_rot_dir           ;
+    reg         r_enc_A             ;
+    reg         r_enc_B             ;
+    reg         r_enc_Z             ;
+    reg         r_posedge_A         ;
+    reg         r_posedge_B         ;
+    reg         r_posedge_Z         ;
+    reg         r_negedge_A         ;
+    reg         r_negedge_B         ;
+    reg         r_negedge_Z         ;
+    reg [15:0]  r_dbg_posedge_cntA  ; 
+    reg [15:0]  r_dbg_posedge_cntB  ; 
+    reg [ 3:0]  r_dbg_posedge_cntZ  ; 
+    reg [15:0]  r_dbg_negedge_cntA  ; 
+    reg [15:0]  r_dbg_negedge_cntB  ; 
+    reg [ 3:0]  r_dbg_negedge_cntZ  ; 
 
     // Initialize
     initial begin
-        r_cnt     = 32'd0   ;
-        r_state   = IDLE    ;
-        r_rot_dir = 1'b0    ;
+        r_cnt                   = 32'd0     ;
+        r_state                 = IDLE      ;
+        r_rot_dir               = 1'b0      ;
+        r_dbg_posedge_cntA      = 16'd0     ;
+        r_dbg_posedge_cntB      = 16'd0     ;
+        r_dbg_posedge_cntZ      =  4'd0     ;
+        r_dbg_negedge_cntA      = 16'd0     ;
+        r_dbg_negedge_cntB      = 16'd0     ;
+        r_dbg_negedge_cntZ      =  4'd0     ;
     end
 
 
@@ -52,17 +67,20 @@ module i_user_encoder (
         // Generate Edge Signal
         r_enc_A     <= I_ENC_A ;
         r_enc_B     <= I_ENC_B ;
+        r_enc_Z     <= I_ENC_Z ;
         r_posedge_A <= I_ENC_A  & ~r_enc_A ;
         r_posedge_B <= I_ENC_B  & ~r_enc_B ;
+        r_posedge_Z <= I_ENC_Z  & ~r_enc_Z ;
         r_negedge_A <= ~I_ENC_A & r_enc_A ;
         r_negedge_B <= ~I_ENC_B & r_enc_B ;
+        r_negedge_Z <= ~I_ENC_Z & r_enc_Z ;
         
         // RESET
         if (I_RST) begin
             r_cnt   <= 0 ;
             r_state <= IDLE ;
         end
-        
+
         // Sequence
         case(r_state)
             IDLE: begin
@@ -94,12 +112,12 @@ module i_user_encoder (
                 if (r_negedge_A) begin
                     r_state     <= STATE_00 ;
                     r_rot_dir   <= ROT_CCW ;
-                    r_cnt       <= r_cnt - 1 ;
+                    // r_cnt       <= r_cnt - 1 ;
                 end
                 if (r_posedge_B) begin
                     r_state     <= STATE_BA ;
                     r_rot_dir   <= ROT_CW ;
-                    r_cnt       <= r_cnt + 1 ;
+                    // r_cnt       <= r_cnt + 1 ;
                 end
             end
 
@@ -107,12 +125,12 @@ module i_user_encoder (
                 if (r_posedge_A) begin
                     r_state     <= STATE_BA ;
                     r_rot_dir   <= ROT_CCW ;
-                    r_cnt       <= r_cnt - 1 ;
+                    // r_cnt       <= r_cnt - 1 ;
                 end
                 if (r_negedge_B) begin
                     r_state     <= STATE_00 ;
                     r_rot_dir   <= ROT_CW ;
-                    r_cnt       <= r_cnt + 1 ;
+                    // r_cnt       <= r_cnt + 1 ;
                 end
             end
 
@@ -120,57 +138,52 @@ module i_user_encoder (
                 if (r_negedge_A) begin
                     r_state     <= STATE_B0 ;
                     r_rot_dir   <= ROT_CW ;
-                    r_cnt       <= r_cnt + 1 ;
+                    // r_cnt       <= r_cnt + 1 ;
                 end
                 if (r_negedge_B) begin
                     r_state     <= STATE_0A ;
                     r_rot_dir   <= ROT_CCW ;
-                    r_cnt       <= r_cnt - 1 ;
+                    // r_cnt       <= r_cnt - 1 ;
                 end
             end
 
-
-
-
-            // if (r_posedge_A) begin
-            //         state <= STATE_Ao;
-            //     end else begin
-            //         state <= IDLE;
-            //     end
-            // end
-            
-            // STATE_Ao: begin
-            //     if (I_ENC_B) begin
-            //         state <= STATE_oB;
-            //     end else begin
-            //         state <= STATE_AB;
-            //         r_cnt <= r_cnt + 1;
-            //     end
-            // end
-            // 
-            // STATE_oB: begin
-            //     if (!I_ENC_A) begin
-            //         state <= IDLE;
-            //     end else begin
-            //         state <= STATE_AB;
-            //         r_cnt <= r_cnt - 1;
-            //     end
-            // end
-            // 
-            // STATE_AB: begin
-            //     if (!I_ENC_A && I_ENC_B) begin
-            //         state <= STATE_oB;
-            //         r_cnt <= r_cnt - 1;
-            //     end else if (I_ENC_A && !I_ENC_B) begin
-            //         state <= STATE_Ao;
-            //         r_cnt <= r_cnt + 1;
-            //     end else if (I_ENC_A && I_ENC_B) begin
-            //         state <= STATE_AB;
-            //     end else begin
-            //         state <= IDLE;
-            //     end
-            // end
         endcase
+
+
+        // Debug
+        if (I_RST) begin
+            r_dbg_posedge_cntA <= 0 ;
+            r_dbg_posedge_cntB <= 0 ;
+            r_dbg_posedge_cntZ <= 0 ;
+            r_dbg_negedge_cntA <= 0 ;
+            r_dbg_negedge_cntB <= 0 ;
+            r_dbg_negedge_cntZ <= 0 ;
+
+        end else begin
+            if (r_posedge_A) begin
+                r_dbg_posedge_cntA <= r_dbg_posedge_cntA + 1 ;
+            end
+
+            if (r_negedge_A) begin
+                r_dbg_negedge_cntA <= r_dbg_negedge_cntA + 1 ;
+            end
+
+            if (r_posedge_B) begin
+                r_dbg_posedge_cntB <= r_dbg_posedge_cntB + 1 ;
+            end
+
+            if (r_negedge_B) begin
+                r_dbg_negedge_cntB <= r_dbg_negedge_cntB + 1 ;
+            end
+
+            if (r_posedge_Z) begin
+                r_dbg_posedge_cntZ <= r_dbg_posedge_cntZ + 1 ;
+            end
+
+            if (r_negedge_Z) begin
+                r_dbg_negedge_cntZ <= r_dbg_negedge_cntZ + 1 ;
+            end
+        end
     end
 
 
@@ -197,6 +210,12 @@ module i_user_encoder (
         ,.probe_in0     (r_state            ) // input [ 2:0]
         ,.probe_in1     (r_cnt              ) // input [31:0]
         ,.probe_in2     (r_rot_dir          ) // input 
+        ,.probe_in3     (r_dbg_posedge_cntA ) // input [15:0]
+        ,.probe_in4     (r_dbg_negedge_cntA ) // input [15:0]
+        ,.probe_in5     (r_dbg_posedge_cntB ) // input [15:0]
+        ,.probe_in6     (r_dbg_negedge_cntB ) // input [15:0]
+        ,.probe_in7     (r_dbg_posedge_cntZ ) // input [ 3:0]
+        ,.probe_in8     (r_dbg_negedge_cntZ ) // input [ 3:0]
     ) ;
 
     

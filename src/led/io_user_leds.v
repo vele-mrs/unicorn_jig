@@ -95,14 +95,14 @@ module io_user_leds (
     pwm_controller
 ---------------------------------------------------------------------------- */
     assign w_duty = (w_vio_fixd_mode) ?
-                    {   w_vio_duty_r,w_vio_duty_g,w_vio_duty_b,
-                        w_vio_duty_r,w_vio_duty_g,w_vio_duty_b,
-                        w_vio_duty_r,w_vio_duty_g,w_vio_duty_b,
-                        w_vio_duty_r,w_vio_duty_g,w_vio_duty_b} :
-                    {   w_duty_r,w_duty_g,w_duty_b,
-                        w_duty_g,w_duty_b,w_duty_r,
-                        w_duty_b,w_duty_r,w_duty_g,
-                        w_duty_r,w_duty_g,w_duty_b} ;
+                    {   w_vio_duty_r,   w_vio_duty_g,   w_vio_duty_b,
+                        w_vio_duty_r,   w_vio_duty_g,   w_vio_duty_b,
+                        w_vio_duty_r,   w_vio_duty_g,   w_vio_duty_b,
+                        w_vio_duty_r,   w_vio_duty_g,   w_vio_duty_b} :
+                    {   w_duty_r,       w_duty_g,       w_duty_b,
+                        w_duty_r,       w_duty_g,       w_duty_b,
+                        w_duty_r,       w_duty_g,       w_duty_b,
+                        w_duty_r,       w_duty_g,       w_duty_b} ;
 
     generate
         for(i = 0; i < P_MODULE_NUM; i = i + 1) begin: GenerateUserLEDs

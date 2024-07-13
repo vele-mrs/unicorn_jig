@@ -34,6 +34,9 @@ module top (
     wire w_enc_a ;
     wire w_enc_b ;
     wire w_enc_z ;
+    wire w_enc_a_clean ;
+    wire w_enc_b_clean ;
+    wire w_enc_z_clean ;
 
 /* ----------------------------------------------------------------------------
     USER RESET
@@ -69,12 +72,32 @@ module top (
     assign w_enc_b = I_JA[1] ; 
     assign w_enc_z = I_JA[2] ; 
 
+    debouncer debouncer_enc_a (
+         .clk           (I_CLK_100MHZ                   ) // input
+        ,.reset         (w_user_rst                     ) // input
+        ,.noisy_in      (w_enc_a                        ) // input
+        ,.clean_out     (w_enc_a_clean                  ) // output
+    ) ;
+    debouncer debouncer_enc_b (
+         .clk           (I_CLK_100MHZ                   ) // input
+        ,.reset         (w_user_rst                     ) // input
+        ,.noisy_in      (w_enc_b                        ) // input
+        ,.clean_out     (w_enc_b_clean                  ) // output
+    ) ;
+    debouncer debouncer_enc_z (
+         .clk           (I_CLK_100MHZ                   ) // input
+        ,.reset         (w_user_rst                     ) // input
+        ,.noisy_in      (w_enc_z                        ) // input
+        ,.clean_out     (w_enc_z_clean                  ) // output
+    ) ;
+
+
     i_user_encoder i_user_encoder_inst (
          .I_CLK_100MHZ  (I_CLK_100MHZ                   ) // input 
         ,.I_RST         (w_user_rst                     ) // input 
-        ,.I_ENC_A       (w_enc_a                        ) // input 
-        ,.I_ENC_B       (w_enc_b                        ) // input 
-        ,.I_ENC_Z       (w_enc_z                        ) // input 
+        ,.I_ENC_A       (w_enc_a_clean                  ) // input 
+        ,.I_ENC_B       (w_enc_b_clean                  ) // input 
+        ,.I_ENC_Z       (w_enc_z_clean                  ) // input 
     ) ;
 
 
