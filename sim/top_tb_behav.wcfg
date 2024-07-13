@@ -11,77 +11,75 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3,276.895000 us"></ZoomStartTime>
-      <ZoomEndTime time="4,080.895001 us"></ZoomEndTime>
-      <Cursor1Time time="3,640.895000 us"></Cursor1Time>
+      <ZoomStartTime time="2,031,459.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,032,563.001 ns"></ZoomEndTime>
+      <Cursor1Time time="2,020,025.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="169"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="195"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/top_tb/r_clk_100mhz" type="logic">
       <obj_property name="ElementShortName">r_clk_100mhz</obj_property>
       <obj_property name="ObjectShortName">r_clk_100mhz</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/r_sw" type="array">
-      <obj_property name="ElementShortName">r_sw[3:0]</obj_property>
-      <obj_property name="ObjectShortName">r_sw[3:0]</obj_property>
+   <wvobject fp_name="/top_tb/r_cw" type="logic">
+      <obj_property name="ElementShortName">r_cw</obj_property>
+      <obj_property name="ObjectShortName">r_cw</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/r_btn" type="array">
-      <obj_property name="ElementShortName">r_btn[3:0]</obj_property>
-      <obj_property name="ObjectShortName">r_btn[3:0]</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/I_RST" type="logic">
+      <obj_property name="ElementShortName">I_RST</obj_property>
+      <obj_property name="ObjectShortName">I_RST</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led" type="array">
-      <obj_property name="ElementShortName">w_led[3:0]</obj_property>
-      <obj_property name="ObjectShortName">w_led[3:0]</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/I_ENC_A" type="logic">
+      <obj_property name="ElementShortName">I_ENC_A</obj_property>
+      <obj_property name="ObjectShortName">I_ENC_A</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led0_b" type="logic">
-      <obj_property name="ElementShortName">w_led0_b</obj_property>
-      <obj_property name="ObjectShortName">w_led0_b</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/I_ENC_B" type="logic">
+      <obj_property name="ElementShortName">I_ENC_B</obj_property>
+      <obj_property name="ObjectShortName">I_ENC_B</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led0_g" type="logic">
-      <obj_property name="ElementShortName">w_led0_g</obj_property>
-      <obj_property name="ObjectShortName">w_led0_g</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/I_ENC_Z" type="logic">
+      <obj_property name="ElementShortName">I_ENC_Z</obj_property>
+      <obj_property name="ObjectShortName">I_ENC_Z</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led0_r" type="logic">
-      <obj_property name="ElementShortName">w_led0_r</obj_property>
-      <obj_property name="ObjectShortName">w_led0_r</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/r_cnt" type="array">
+      <obj_property name="ElementShortName">r_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_cnt[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led1_b" type="logic">
-      <obj_property name="ElementShortName">w_led1_b</obj_property>
-      <obj_property name="ObjectShortName">w_led1_b</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/IDLE" type="array">
+      <obj_property name="ElementShortName">IDLE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led1_g" type="logic">
-      <obj_property name="ElementShortName">w_led1_g</obj_property>
-      <obj_property name="ObjectShortName">w_led1_g</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/r_enc_A" type="logic">
+      <obj_property name="ElementShortName">r_enc_A</obj_property>
+      <obj_property name="ObjectShortName">r_enc_A</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led1_r" type="logic">
-      <obj_property name="ElementShortName">w_led1_r</obj_property>
-      <obj_property name="ObjectShortName">w_led1_r</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/r_enc_B" type="logic">
+      <obj_property name="ElementShortName">r_enc_B</obj_property>
+      <obj_property name="ObjectShortName">r_enc_B</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led2_b" type="logic">
-      <obj_property name="ElementShortName">w_led2_b</obj_property>
-      <obj_property name="ObjectShortName">w_led2_b</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/r_posedge_A" type="logic">
+      <obj_property name="ElementShortName">r_posedge_A</obj_property>
+      <obj_property name="ObjectShortName">r_posedge_A</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led2_g" type="logic">
-      <obj_property name="ElementShortName">w_led2_g</obj_property>
-      <obj_property name="ObjectShortName">w_led2_g</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/r_posedge_B" type="logic">
+      <obj_property name="ElementShortName">r_posedge_B</obj_property>
+      <obj_property name="ObjectShortName">r_posedge_B</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led2_r" type="logic">
-      <obj_property name="ElementShortName">w_led2_r</obj_property>
-      <obj_property name="ObjectShortName">w_led2_r</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/r_state" type="array">
+      <obj_property name="ElementShortName">r_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r_state[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led3_b" type="logic">
-      <obj_property name="ElementShortName">w_led3_b</obj_property>
-      <obj_property name="ObjectShortName">w_led3_b</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/r_cnt" type="array">
+      <obj_property name="ElementShortName">r_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_cnt[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/top_tb/w_led3_g" type="logic">
-      <obj_property name="ElementShortName">w_led3_g</obj_property>
-      <obj_property name="ObjectShortName">w_led3_g</obj_property>
-   </wvobject>
-   <wvobject fp_name="/top_tb/w_led3_r" type="logic">
-      <obj_property name="ElementShortName">w_led3_r</obj_property>
-      <obj_property name="ObjectShortName">w_led3_r</obj_property>
+   <wvobject fp_name="/top_tb/top_inst/i_user_encoder_inst/r_rot_dir" type="logic">
+      <obj_property name="ElementShortName">r_rot_dir</obj_property>
+      <obj_property name="ObjectShortName">r_rot_dir</obj_property>
    </wvobject>
 </wave_config>

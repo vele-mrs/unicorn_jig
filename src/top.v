@@ -13,6 +13,7 @@ module top (
          input          I_CLK_100MHZ
         ,input  [3:0]   I_SW
         ,input  [3:0]   I_BTN
+        ,input  [7:0]   I_JA
         ,output [3:0]   O_LED
         ,output         O_LED0_B
         ,output         O_LED0_G
@@ -30,6 +31,9 @@ module top (
 
     // Declaration
     wire w_user_rst ;
+    wire w_enc_a ;
+    wire w_enc_b ;
+    wire w_enc_z ;
 
 /* ----------------------------------------------------------------------------
     USER RESET
@@ -58,5 +62,28 @@ module top (
     ) ;
 
 
+/* ----------------------------------------------------------------------------
+    incremental_encoder
+---------------------------------------------------------------------------- */
+    assign w_enc_a = I_JA[0] ; 
+    assign w_enc_b = I_JA[1] ; 
+    assign w_enc_z = I_JA[2] ; 
+
+    i_user_encoder i_user_encoder_inst (
+         .I_CLK_100MHZ  (I_CLK_100MHZ                   ) // input 
+        ,.I_RST         (w_user_rst                     ) // input 
+        ,.I_ENC_A       (w_enc_a                        ) // input 
+        ,.I_ENC_B       (w_enc_b                        ) // input 
+        ,.I_ENC_Z       (w_enc_z                        ) // input 
+    ) ;
+
+
+/* ----------------------------------------------------------------------------
+    ILA (Integrated Logic Analyzer)
+---------------------------------------------------------------------------- */
+    // ila_user_input ila_user_input_ip_inst (
+    //      .clk           (I_CLK_100MHZ       )
+    //     ,.probe0        (I_JA               ) // [7:0]
+    // ) ;
 
 endmodule
