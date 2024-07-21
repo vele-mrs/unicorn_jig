@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../ip/vio_user_leds/hdl/verilog" --include "../../../ip/vio_user_leds/hdl" \
+"../../../ip/vio_user_leds/sim/vio_user_leds.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

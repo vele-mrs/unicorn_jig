@@ -1,0 +1,5 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../../../../Xilinx/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl/verilog"incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl"
+xpm_memory.sv,systemverilog,xpm,../../../../../../../../Xilinx/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl/verilog"incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../../../../Xilinx/Vivado/2021.2/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl/verilog"incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl"
+vio_user_encoder.v,verilog,xil_defaultlib,../../../../project.gen/sources_1/ip/vio_user_encoder/sim/vio_user_encoder.v,incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl/verilog"incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,2 @@
+ila_user_input.v,verilog,xil_defaultlib,../../../../project.gen/sources_1/ip/ila_user_input/sim/ila_user_input.v,incdir="../../../../project.gen/sources_1/ip/ila_user_input/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

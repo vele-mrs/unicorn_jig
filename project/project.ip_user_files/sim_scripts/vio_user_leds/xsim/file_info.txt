@@ -1,0 +1,2 @@
+vio_user_leds.v,verilog,xil_defaultlib,../../../ip/vio_user_leds/sim/vio_user_leds.v,incdir="../../../ip/vio_user_leds/hdl/verilog"incdir="../../../ip/vio_user_leds/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,23 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/project/project.gen/sources_1/ip/vio_user_encoder/sim/vio_user_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vio_user_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/project/project.gen/sources_1/ip/ila_user_encoder/sim/ila_user_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_user_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/project/project.ip_user_files/ip/ila_user_leds/sim/ila_user_leds.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_user_leds
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/project/project.ip_user_files/ip/vio_user_leds/sim/vio_user_leds.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vio_user_leds
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/src/common/clock_enable_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_enable_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/src/encoder/i_user_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i_user_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/src/led/io_user_leds.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module io_user_leds
+WARNING: [VRFC 10-8497] literal value 'd10000 truncated to fit in 12 bits [C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/src/led/io_user_leds.v:69]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/src/led/pwm_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/src/led/rainbow_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rainbow_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/vele/Desktop/Workspace/Project_FPGA/unicorn_jig/sim/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb

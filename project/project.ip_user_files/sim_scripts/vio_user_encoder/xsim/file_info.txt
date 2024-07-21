@@ -1,0 +1,2 @@
+vio_user_encoder.v,verilog,xil_defaultlib,../../../../project.gen/sources_1/ip/vio_user_encoder/sim/vio_user_encoder.v,incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl/verilog"incdir="../../../../project.gen/sources_1/ip/vio_user_encoder/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v
